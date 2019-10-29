@@ -18,6 +18,7 @@ var extensiones = { //extensiones de lo archivo o cosas a enviar
 }
 
 var dato = "";
+var dato2 = "";
 function servidor(pedido, respuesta) {
     //
     var objetoUrl = url.parse(pedido.url);
@@ -48,17 +49,22 @@ function servidor(pedido, respuesta) {
                         var parametro = arreglo_parametros[i];
                         var datos_parametro = parametro.split('=');
                         console.log(datos_parametro);
-                        dato += datos_parametro[1];
+                        dato += datos_parametro[1] + ",";
+                        dato2 += datos_parametro[0] + ",";
 
                         var miArreglo = [];
-                        miArreglo.push(datos_parametro);
+                        var miArreglo2 = [];
+                        miArreglo.push(dato);
+                        miArreglo2.push(dato2);
                         
-
+                        // Muestra txtCantidad_2,2
+                        console.log("Dato: " + miArreglo);
+                        console.log("Dato: " + miArreglo2);
                     }
-                    console.log("Perra daniel"+miArreglo.length);
-                   // console.log("Perra daniel"+miArreglo[0][0]);
-                    //console.log("Perra daniel"+datos_parametro[3]);
-                    //console.log("Perra daniel"+datos_parametro[4]);
+                    
+                   // console.log("Dato: "+miArreglo[0][0]);
+                    //console.log("Dato: "+datos_parametro[3]);
+                    //console.log("Dato: "+datos_parametro[4]);
                 }
                 else {
                     dato = "";
