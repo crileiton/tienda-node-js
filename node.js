@@ -56,12 +56,33 @@ function servidor(pedido, respuesta) {
                         var miArreglo2 = [];
                         miArreglo.push(dato);
                         miArreglo2.push(dato2);
-                        
-                        // Muestra txtCantidad_2,2
-                        console.log("Dato: " + miArreglo);
-                        console.log("Dato: " + miArreglo2);
+
                     }
                     
+
+
+
+                    var arreglo_cantidades = [];
+                    var arreglo_txts = [];
+
+                    var cantidades_final = [];
+                    var nombres = [];
+
+                    arreglo_cantidades = miArreglo[0].split(",");
+                    arreglo_txts = miArreglo2[0].split(",");
+
+                    arreglo_cantidades.reverse();
+                    arreglo_txts.reverse();
+
+                    arreglo_cantidades.pop(); 
+                    arreglo_txts.pop(); 
+
+                    cantidades_final = arreglo_cantidades.slice(3);
+                    nombres = arreglo_txts.slice(3);
+
+                    console.log("Tamaño cantidades: " + cantidades_final.length);
+                    console.log("Tamaño txts: " + nombres.length);
+
                    // console.log("Dato: "+miArreglo[0][0]);
                     //console.log("Dato: "+datos_parametro[3]);
                     //console.log("Dato: "+datos_parametro[4]);
