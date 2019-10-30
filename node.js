@@ -652,7 +652,7 @@ function servidor(pedido, respuesta) {
                 }
 
                 var textoHtml = contenido.toString();
-                textoHtml = textoHtml.replace("{variable1}", "" + dato);
+                textoHtml = textoHtml.replace("{variable1}", ""+dato);
 
                 respuesta.write(textoHtml);
                 respuesta.end();
