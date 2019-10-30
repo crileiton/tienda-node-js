@@ -69,20 +69,23 @@ function servidor(pedido, respuesta) {
                     arreglo_cantidades = miArreglo[0].split(",");
                     arreglo_txts = miArreglo2[0].split(",");
 
-                    console.log("Holiiiiiiii: " + arreglo_cantidades[0]);
-                    console.log("Holoooooooo: " + arreglo_txts[0]);
-
+                    
                     // Elimina el último objeto del arreglo
                     arreglo_cantidades.pop(); 
                     arreglo_txts.pop(); 
 
-                    // Guarda en cada variable desde la posición 3 (Esto se hace debido a que se realiza doble petición - en nuestro caso -)
-                    cantidades_final = arreglo_cantidades.slice(1);
-                    nombres_final = arreglo_txts.slice(3);
-
                     // Para invertir los arreglos
                     cantidades_final.reverse();
                     nombres_final.reverse();
+
+                    // Guarda en cada variable desde la posición 3 (Esto se hace debido a que se realiza doble petición - en nuestro caso -)
+                    cantidades_final = arreglo_cantidades.slice(0);
+                    nombres_final = arreglo_txts.slice(3);
+
+                    console.log("Holiiiiiiii: " + cantidades_final.length);
+                    console.log("Holoooooooo: " + nombres_final.length);
+
+                    
 
                    // console.log("Tamaño cantidades: " + cantidades_final[0]);
                    // console.log("Tamaño txts: " + nombres_final[0]);
@@ -132,7 +135,7 @@ function servidor(pedido, respuesta) {
                     
                     }
 
-                    // Calculo producto 1
+                    // Calculo producto 2
 
                     function darCalcularPrecio_2() {
                         var vacia = cantidades_final[1];
@@ -174,11 +177,53 @@ function servidor(pedido, respuesta) {
                     }
 
 
+                    // Calculo producto 3
+
+                    function darCalcularPrecio_3() {
+                        var vacia = cantidades_final[2];
+                        var cantidad = parseInt(cantidades_final[2]);
+                        var total_compra_normal = cantidad * 40000;
+                        var fin = 0;
+                    
+                        if (vacia == "") {
+                            fin = 0;
+                            return fin;
+                        }
+                        else if (cantidad == 0) {
+
+                            fin = 0;
+                            return fin;
+                        }
+                        else if (cantidad >= 10) {
+                            var descuento = total_compra_normal * 0.1;
+                            var total_con_descuento = total_compra_normal - descuento;
+                    
+                            fin = total_con_descuento;
+                            return fin;
+                        }
+                        else {
+                            if (cantidad > 1) {
+                                descuento = 0;
+                    
+                                fin = total_compra_normal;
+                                return fin;
+                            }
+                            else {
+                                descuento = 0;
+                    
+                                fin = total_compra_normal;
+                                return fin;
+                            }
+                        }
+                    
+                    }
+
+
                     function darCalcularTotal() {
     
                         var p1 = darCalcularPrecio_1();
                         var p2 = darCalcularPrecio_2();
-                        //var p3 = darCalcularPrecio_3();
+                        var p3 = darCalcularPrecio_3();
                         //var p4 = darCalcularPrecio_4();
                         //var p5 = darCalcularPrecio_5();
                         //var p6 = darCalcularPrecio_6();
@@ -189,7 +234,7 @@ function servidor(pedido, respuesta) {
                         //var p11 = darCalcularPrecio_11();
                         //var p12 = darCalcularPrecio_12();
                     
-                        var miTotal = p1 + p2;
+                        var miTotal = p1 + p2 + p3;
                         return miTotal;
                         //var miTotal = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12;
                         //parrafo_total.innerHTML = "El total a pagar por toda su compra es:  <strong>$" + formatNumber.new(miTotal) + "</strong>";
