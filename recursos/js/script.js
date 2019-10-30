@@ -8,7 +8,7 @@ var descuento_html_1 = document.getElementById('descuento_1');
 var normal_html_1 = document.getElementById('normal_1');
 
 btnCalcular_1.addEventListener("click", darCalcularPrecio_1);
-btnCalcular_1.addEventListener("click", darCalcularTotal);
+btnCalcular_1.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 1: Calcula precio según la cantidad de productos.
@@ -82,7 +82,7 @@ var descuento_html_2 = document.getElementById('descuento_2');
 var normal_html_2 = document.getElementById('normal_2');
 
 btnCalcular_2.addEventListener("click", darCalcularPrecio_2);
-btnCalcular_2.addEventListener("click", darCalcularTotal);
+btnCalcular_2.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 2: Calcula precio según la cantidad de productos.
@@ -160,7 +160,7 @@ var descuento_html_3 = document.getElementById('descuento_3');
 var normal_html_3 = document.getElementById('normal_3');
 
 btnCalcular_3.addEventListener("click", darCalcularPrecio_3);
-btnCalcular_3.addEventListener("click", darCalcularTotal);
+btnCalcular_3.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 3: Calcula precio según la cantidad de productos.
@@ -244,7 +244,7 @@ var descuento_html_4 = document.getElementById('descuento_4');
 var normal_html_4 = document.getElementById('normal_4');
 
 btnCalcular_4.addEventListener("click", darCalcularPrecio_4);
-btnCalcular_4.addEventListener("click", darCalcularTotal);
+btnCalcular_4.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 4: Calcula precio según la cantidad de productos.
@@ -326,7 +326,7 @@ var descuento_html_5 = document.getElementById('descuento_5');
 var normal_html_5 = document.getElementById('normal_5');
 
 btnCalcular_5.addEventListener("click", darCalcularPrecio_5);
-btnCalcular_5.addEventListener("click", darCalcularTotal);
+btnCalcular_5.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 5: Calcula precio según la cantidad de productos.
@@ -409,7 +409,7 @@ var descuento_html_6 = document.getElementById('descuento_6');
 var normal_html_6 = document.getElementById('normal_6');
 
 btnCalcular_6.addEventListener("click", darCalcularPrecio_6);
-btnCalcular_6.addEventListener("click", darCalcularTotal);
+btnCalcular_6.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 6: Calcula precio según la cantidad de productos.
@@ -491,7 +491,7 @@ var descuento_html_7 = document.getElementById('descuento_7');
 var normal_html_7 = document.getElementById('normal_7');
 
 btnCalcular_7.addEventListener("click", darCalcularPrecio_7);
-btnCalcular_7.addEventListener("click", darCalcularTotal);
+btnCalcular_7.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 7: Calcula precio según la cantidad de productos.
@@ -573,7 +573,7 @@ var descuento_html_8 = document.getElementById('descuento_8');
 var normal_html_8 = document.getElementById('normal_8');
 
 btnCalcular_8.addEventListener("click", darCalcularPrecio_8);
-btnCalcular_8.addEventListener("click", darCalcularTotal);
+btnCalcular_8.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 8: Calcula precio según la cantidad de productos.
@@ -655,7 +655,7 @@ var descuento_html_9 = document.getElementById('descuento_9');
 var normal_html_9 = document.getElementById('normal_9');
 
 btnCalcular_9.addEventListener("click", darCalcularPrecio_9);
-btnCalcular_9.addEventListener("click", darCalcularTotal);
+btnCalcular_9.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 9: Calcula precio según la cantidad de productos.
@@ -737,7 +737,7 @@ var descuento_html_10 = document.getElementById('descuento_10');
 var normal_html_10 = document.getElementById('normal_10');
 
 btnCalcular_10.addEventListener("click", darCalcularPrecio_10);
-btnCalcular_10.addEventListener("click", darCalcularTotal);
+btnCalcular_10.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 10: Calcula precio según la cantidad de productos.
@@ -820,7 +820,7 @@ var descuento_html_11 = document.getElementById('descuento_11');
 var normal_html_11 = document.getElementById('normal_11');
 
 btnCalcular_11.addEventListener("click", darCalcularPrecio_11);
-btnCalcular_11.addEventListener("click", darCalcularTotal);
+btnCalcular_11.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 11: Calcula precio según la cantidad de productos.
@@ -904,7 +904,7 @@ var descuento_html_12 = document.getElementById('descuento_12');
 var normal_html_12 = document.getElementById('normal_12');
 
 btnCalcular_12.addEventListener("click", darCalcularPrecio_12);
-btnCalcular_12.addEventListener("click", darCalcularTotal);
+btnCalcular_12.addEventListener("click", calculoIndividual);
 
 /**
  * Producto 12: Calcula precio según la cantidad de productos.
@@ -982,28 +982,28 @@ function darCalcularPrecio_12() {
 
 var btnTotal = document.getElementById('btntotaltotal');
 var parrafo_total = document.getElementById('totaltotal');
-btnTotal.addEventListener("click", darCalcularTotal);
+btnTotal.addEventListener("click", calculoIndividual);
 
 /**
  * Devuelve la suma total de la compra
  */
-function darCalcularTotal() {
+function calculoIndividual() {
     
-    var p1 = darCalcularPrecio_1();
-    var p2 = darCalcularPrecio_2();
-    var p3 = darCalcularPrecio_3();
-    var p4 = darCalcularPrecio_4();
-    var p5 = darCalcularPrecio_5();
-    var p6 = darCalcularPrecio_6();
-    var p7 = darCalcularPrecio_7();
-    var p8 = darCalcularPrecio_8();
-    var p9 = darCalcularPrecio_9();
-    var p10 = darCalcularPrecio_10();
-    var p11 = darCalcularPrecio_11();
-    var p12 = darCalcularPrecio_12();
+    darCalcularPrecio_1();
+    darCalcularPrecio_2();
+    darCalcularPrecio_3();
+    darCalcularPrecio_4();
+    darCalcularPrecio_5();
+    darCalcularPrecio_6();
+    darCalcularPrecio_7();
+    darCalcularPrecio_8();
+    darCalcularPrecio_9();
+    darCalcularPrecio_10();
+    darCalcularPrecio_11();
+    darCalcularPrecio_12();
 
-    var miTotal = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12;
-    parrafo_total.innerHTML = "El total a pagar por toda su compra es:  <strong>$" + formatNumber.new(miTotal) + "</strong>";
+    //var miTotal = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12;
+    //parrafo_total.innerHTML = "El total a pagar por toda su compra es:  <strong>$" + formatNumber.new(miTotal) + "</strong>";
 }
 
 

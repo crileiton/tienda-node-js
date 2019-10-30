@@ -48,7 +48,6 @@ function servidor(pedido, respuesta) {
 
                         var parametro = arreglo_parametros[i];
                         var datos_parametro = parametro.split('=');
-                        console.log(datos_parametro);
                         dato += datos_parametro[1] + ",";
                         dato2 += datos_parametro[0] + ",";
 
@@ -82,8 +81,6 @@ function servidor(pedido, respuesta) {
                     cantidades_final = arreglo_cantidades.slice(0);
                     nombres_final = arreglo_txts.slice(3);
 
-                    console.log("Holiiiiiiii: " + cantidades_final.length);
-                    console.log("Holoooooooo: " + nombres_final.length);
 
 
 
