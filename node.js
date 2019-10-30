@@ -56,6 +56,7 @@ function servidor(pedido, respuesta) {
                         var miArreglo2 = [];
                         miArreglo.push(dato);
                         miArreglo2.push(dato2);
+                        
 
                     }
     
@@ -68,20 +69,23 @@ function servidor(pedido, respuesta) {
                     arreglo_cantidades = miArreglo[0].split(",");
                     arreglo_txts = miArreglo2[0].split(",");
 
+                    console.log("Holiiiiiiii: " + arreglo_cantidades[0]);
+                    console.log("Holoooooooo: " + arreglo_txts[0]);
+
                     // Elimina el último objeto del arreglo
                     arreglo_cantidades.pop(); 
                     arreglo_txts.pop(); 
 
                     // Guarda en cada variable desde la posición 3 (Esto se hace debido a que se realiza doble petición - en nuestro caso -)
-                    cantidades_final = arreglo_cantidades.slice(3);
+                    cantidades_final = arreglo_cantidades.slice(1);
                     nombres_final = arreglo_txts.slice(3);
 
                     // Para invertir los arreglos
                     cantidades_final.reverse();
                     nombres_final.reverse();
 
-                    console.log("Tamaño cantidades: " + cantidades_final[0]);
-                    console.log("Tamaño txts: " + nombres_final[0]);
+                   // console.log("Tamaño cantidades: " + cantidades_final[0]);
+                   // console.log("Tamaño txts: " + nombres_final[0]);
 
                     /**
                      * Aqui inicia el calculo de productos
