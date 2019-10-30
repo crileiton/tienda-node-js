@@ -1,4 +1,10 @@
 /**
+ * =====================================================================================================
+ * ### ESTE SCRIPT REALIZA LA PARTE DE CALCULO POR CADA PRODUCTO, PERO EL TOTAL ESTA ECHO EN NODE.JS ###
+ * =====================================================================================================
+ */
+
+/**
  * Producto 1
  */
 var txtCantidad_1 = document.getElementById('txtCantidad_1');
