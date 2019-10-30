@@ -91,6 +91,8 @@ function servidor(pedido, respuesta) {
                      * Aqui inicia el calculo de productos
                      */
 
+                    // Calculo producto 1
+
                     function darCalcularPrecio_1() {
                         var vacia = cantidades_final[0];
                         var cantidad = parseInt(cantidades_final[0]);
@@ -130,11 +132,52 @@ function servidor(pedido, respuesta) {
                     
                     }
 
+                    // Calculo producto 1
+
+                    function darCalcularPrecio_2() {
+                        var vacia = cantidades_final[1];
+                        var cantidad = parseInt(cantidades_final[1]);
+                        var total_compra_normal = cantidad * 40000;
+                        var fin = 0;
+                    
+                        if (vacia == "") {
+                            fin = 0;
+                            return fin;
+                        }
+                        else if (cantidad == 0) {
+
+                            fin = 0;
+                            return fin;
+                        }
+                        else if (cantidad >= 10) {
+                            var descuento = total_compra_normal * 0.1;
+                            var total_con_descuento = total_compra_normal - descuento;
+                    
+                            fin = total_con_descuento;
+                            return fin;
+                        }
+                        else {
+                            if (cantidad > 1) {
+                                descuento = 0;
+                    
+                                fin = total_compra_normal;
+                                return fin;
+                            }
+                            else {
+                                descuento = 0;
+                    
+                                fin = total_compra_normal;
+                                return fin;
+                            }
+                        }
+                    
+                    }
+
 
                     function darCalcularTotal() {
     
                         var p1 = darCalcularPrecio_1();
-                        //var p2 = darCalcularPrecio_2();
+                        var p2 = darCalcularPrecio_2();
                         //var p3 = darCalcularPrecio_3();
                         //var p4 = darCalcularPrecio_4();
                         //var p5 = darCalcularPrecio_5();
@@ -146,7 +189,7 @@ function servidor(pedido, respuesta) {
                         //var p11 = darCalcularPrecio_11();
                         //var p12 = darCalcularPrecio_12();
                     
-                        var miTotal = p1;
+                        var miTotal = p1 + p2;
                         return miTotal;
                         //var miTotal = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12;
                         //parrafo_total.innerHTML = "El total a pagar por toda su compra es:  <strong>$" + formatNumber.new(miTotal) + "</strong>";
