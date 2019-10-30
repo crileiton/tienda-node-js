@@ -97,8 +97,8 @@ function servidor(pedido, respuesta) {
                     // Calculo producto 1
 
                     function darCalcularPrecio_1() {
-                        var vacia = cantidades_final[0];
-                        var cantidad = parseInt(cantidades_final[0]);
+                        var vacia = cantidades_final[2];
+                        var cantidad = parseInt(cantidades_final[2]);
                         var total_compra_normal = cantidad * 20000;
                         var fin = 0;
                     
@@ -180,8 +180,8 @@ function servidor(pedido, respuesta) {
                     // Calculo producto 3
 
                     function darCalcularPrecio_3() {
-                        var vacia = cantidades_final[2];
-                        var cantidad = parseInt(cantidades_final[2]);
+                        var vacia = cantidades_final[0];
+                        var cantidad = parseInt(cantidades_final[0]);
                         var total_compra_normal = cantidad * 40000;
                         var fin = 0;
                     
