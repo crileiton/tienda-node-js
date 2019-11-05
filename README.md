@@ -1,2 +1,2 @@
 # tienda-node-js
-Proyecta tienda con el backend en node js
+Proyecto tienda con el backend en node js
